@@ -3,37 +3,57 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
-}
-
-@book{einstein1956investigations,
+@article{achachlouei2021document,
+  title={Document automation architectures and technologies: A survey},
+  author={Achachlouei, Mohammad Ahmadi and Patil, Omkar and Joshi, Tarun and Nair, Vijayan N},
+  journal={arXiv preprint arXiv:2109.11603},
+  year={2021},
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+  url={https://arxiv.org/abs/2109.11603},
+  preview={doc_auto.png},
+  pdf={documentation.pdf},
+  abstract={This paper surveys the current state of the art in document automation (DA). The objective of DA is to reduce the manual effort during the generation of documents by automatically integrating input from different sources and assembling documents conforming to defined templates. There have been reviews of commercial solutions of DA, particularly in the legal domain, but to date there has been no comprehensive review of the academic research on DA architectures and technologies. The current survey of DA reviews the academic literature and provides a clearer definition and characterization of DA and its features, identifies state-of-the-art DA architectures and technologies in academic research, and provides ideas that can lead to new research opportunities within the DA field in light of recent advances in artificial intelligence and deep neural networks.}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
+@article{patil2022understanding,
+  title={Understanding metrics for paraphrasing},
+  author={Patil, Omkar and Singh, Rahul and Joshi, Tarun},
+  journal={arXiv preprint arXiv:2205.13119},
+  year={2022},
   bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+  url={https://arxiv.org/abs/2205.13119},
+  preview={paraphrasing.png},
+  pdf={paraphrasing.pdf},
+  abstract={Paraphrase generation is a difficult problem. This is not only because of the limitations in text generation capabilities but also due that to the lack of a proper definition of what qualifies as a paraphrase and corresponding metrics to measure how good it is. Metrics for evaluation of paraphrasing quality is an on going research problem. Most of the existing metrics in use having been borrowed from other tasks do not capture the complete essence of a good paraphrase, and often fail at borderline-cases. In this work, we propose a novel metric ROUGEP to measure the quality of paraphrases along the dimensions of adequacy, novelty and fluency. We also provide empirical evidence to show that the current natural language generation metrics are insufficient to measure these desired properties of a good paraphrase. We look at paraphrase model fine-tuning and generation from the lens of metrics to gain a deeper understanding of what it takes to generate and evaluate a good paraphrase.}
 }
 
-@article{PhysRev.47.777,
+@inproceedings{patil2021visual,
+  title={Visual Localization Using Capsule Networks},
+  author={Patil, Omkar},
+  booktitle={International Conference on Computer Vision and Image Processing},
+  pages={164--174},
+  year={2021},
+  organization={Springer},
+  bibtex_show={true},
+  url={https://link.springer.com/chapter/10.1007/978-3-031-11346-8_15},
+  preview={capsules.png},
+  abstract={Visual localization is the task of camera pose estimation, and is crucial for many technologies which involve localization such as mobile robots and augmented reality. Several convolutional neural network models have been proposed for the task against the more accurate geometry based computer vision techniques. However, they have several shortcomings and to our knowledge, this was the first effort that explored the use of an alternative architecture based on capsule-networks for the task. We achieved better results with capsules than with baseline-CNN PoseNet on small NORB dataset, modified for the task of camera pose estimation. Feature visualizations for both the networks produced more insights on their performance and behaviour. We found that there is a scope for improvement and hence propose few directions for future efforts.}
+}
+
+@inproceedings{patil2024motion,
+  title={Motion Composition and Interpolation Using Diffusion Models},
+  author={Patil, Omkar and Gopalan, Nakul},
+  booktitle={RSS 2024 Workshop on Geometric and Algebraic Structure in Robot Learning},
+  year={2024},
+  selected={true},
+  bibtex_show={true},
+  html={https://sites.google.com/asu.edu/comp-styles/},
+  url={https://openreview.net/forum?id=VUFrnwlVC0},
+  preview={comp_styles.png},
+  abstract={Humans have the ability to perform various combinations of skills without having to relearn the overall resulting skill every single time. For example, we prefer to learn easy motions and then combine them in flexible ways to perform complicated movements in dance. Enabling robots to combine or compose skills is essential for their deployment in unstructured environments where they will be required to adapt based on their surroundings. Without such composition robots would have to learn a separate policy for each task which can be combinatorially expensive. To this end, we propose a compositional approach to blend different robot skills using diffusion models. We compose configuration-space diffusion policies for novel motion generation resulting from the corresponding skill combinations. We show that the compositional framework can be utilized to interpolate between different skills leading to greater flexibility in motion. By utilizing interpolation along with composition, we can not only constrain the motion but also generate novel trajectories. We also propose a novel metric based on Maximum Mean Discrepancy and the Forward Kinematics kernel: MMD-FK to quantitatively evaluate the composed robot motion in the task-space while remaining agnostic to the space of policy composition.}
+}
+
+%article{PhysRev.47.777,
   abbr={PhysRev},
   title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
   author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
@@ -58,58 +78,9 @@
   additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
   annotation={* Example use of superscripts<br>† Albert Einstein},
   selected={true},
-  inspirehep_id = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
+  inspirehep_id = {3255},
   award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
+  award_name={Nobel Prize},
+  preview={brownian-motion.gif}
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
 }
