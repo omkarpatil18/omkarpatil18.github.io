@@ -1,0 +1,20 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "postinstall": "npx patch-package",
+  "description": "",
+  "dependencies": {
+    "jsonresume-theme-caffeine": "^1.2.3",
+    "jsonresume-theme-macchiato": "^1.1.0",
+    "jsonresume-theme-paper": "^0.5.0",
+    "jsonresume-theme-professional": "^1.1.0",
+    "resume-cli": "^3.0.8"
+  }
+}
