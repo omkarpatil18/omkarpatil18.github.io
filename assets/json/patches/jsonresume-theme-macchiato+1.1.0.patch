@@ -1,0 +1,19 @@
+diff --git a/node_modules/jsonresume-theme-macchiato/src/resume.hbs b/node_modules/jsonresume-theme-macchiato/src/resume.hbs
+index f163a53..c0bf76c 100644
+--- a/node_modules/jsonresume-theme-macchiato/src/resume.hbs
++++ b/node_modules/jsonresume-theme-macchiato/src/resume.hbs
+@@ -21,12 +21,12 @@
+       </aside>
+       <div class="right-column">
+         {{> summary}}
++        {{> publications }}
++        {{> education }}
+         {{> work }}
+         {{> projects }}
+-        {{> education }}
+         {{> volunteer }}
+         {{> awards }}
+-        {{> publications }}
+         {{> references }}
+       </div>
+     </div>
