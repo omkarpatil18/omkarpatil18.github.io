@@ -34,12 +34,14 @@
       "name": "Hardware-Software Co-Design for Path Planning by Drones",
       "publisher": "IROS 2024 | Ayushi Dube, Omkar Patil, Gian Singh, Nakul Gopalan, and Sarma Vrudhula",
       "releaseDate": "2024-10-20",
+      "url": "https://ieeexplore.ieee.org/document/10802753",
       "summary": "This work consists of designing a hardware-software co-design, MT+, for adapting the Mikami-Tabuchi (MT) algorithm for on-board path planning by drones in a 3D environment."
     },
     {
       "name": "Learning Temporally Composable Task Segmentations with Language",
       "publisher": "IROS 2024 | Divyanshu Raj, Omkar Patil, Weiwei Gu, Chitta Baral and Nakul Gopalan",
       "releaseDate": "2024-10-20",
+      "url": "https://ieeexplore.ieee.org/document/10802712/",
       "summary": "We present an approach to identify sub-tasks within a demonstrated robot trajectory with the supervision provided by language instructions."
     },
     {
@@ -170,6 +172,12 @@
         "Streamlined the scrap collection under the ‘Pasti Ki Pathshala' project by creating a database of participants willing to donate scrap newspaper",
         "Organized a collection drive at a local school for 800+ students to promote the idea of social welfare"
       ]
+    },
+    {
+      "organization": "Conferences",
+      "position": "Reviewer",
+      "startDate": "2023-01-01",
+      "summary": "Reviewer for IROS 2024, ICRA 2025"
     }
   ],
   "awards": [],
