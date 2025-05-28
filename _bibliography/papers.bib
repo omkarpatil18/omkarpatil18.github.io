@@ -9,9 +9,9 @@
   journal={arXiv preprint arXiv:2109.11603},
   year={2021},
   bibtex_show={true},
+  html={https://arxiv.org/abs/2109.11603},
   url={https://arxiv.org/abs/2109.11603},
   preview={doc_auto.png},
-  pdf={documentation.pdf},
   abstract={This paper surveys the current state of the art in document automation (DA). The objective of DA is to reduce the manual effort during the generation of documents by automatically integrating input from different sources and assembling documents conforming to defined templates. There have been reviews of commercial solutions of DA, particularly in the legal domain, but to date there has been no comprehensive review of the academic research on DA architectures and technologies. The current survey of DA reviews the academic literature and provides a clearer definition and characterization of DA and its features, identifies state-of-the-art DA architectures and technologies in academic research, and provides ideas that can lead to new research opportunities within the DA field in light of recent advances in artificial intelligence and deep neural networks.}
 }
 
@@ -22,8 +22,8 @@
   year={2022},
   bibtex_show={true},
   url={https://arxiv.org/abs/2205.13119},
+  html={https://arxiv.org/abs/2205.13119},
   preview={paraphrasing.png},
-  pdf={paraphrasing.pdf},
   abstract={Paraphrase generation is a difficult problem. This is not only because of the limitations in text generation capabilities but also due that to the lack of a proper definition of what qualifies as a paraphrase and corresponding metrics to measure how good it is. Metrics for evaluation of paraphrasing quality is an on going research problem. Most of the existing metrics in use having been borrowed from other tasks do not capture the complete essence of a good paraphrase, and often fail at borderline-cases. In this work, we propose a novel metric ROUGEP to measure the quality of paraphrases along the dimensions of adequacy, novelty and fluency. We also provide empirical evidence to show that the current natural language generation metrics are insufficient to measure these desired properties of a good paraphrase. We look at paraphrase model fine-tuning and generation from the lens of metrics to gain a deeper understanding of what it takes to generate and evaluate a good paraphrase.}
 }
 
@@ -36,11 +36,12 @@
   organization={Springer},
   bibtex_show={true},
   url={https://link.springer.com/chapter/10.1007/978-3-031-11346-8_15},
+  html={https://link.springer.com/chapter/10.1007/978-3-031-11346-8_15},
   preview={capsules.png},
   abstract={Visual localization is the task of camera pose estimation, and is crucial for many technologies which involve localization such as mobile robots and augmented reality. Several convolutional neural network models have been proposed for the task against the more accurate geometry based computer vision techniques. However, they have several shortcomings and to our knowledge, this was the first effort that explored the use of an alternative architecture based on capsule-networks for the task. We achieved better results with capsules than with baseline-CNN PoseNet on small NORB dataset, modified for the task of camera pose estimation. Feature visualizations for both the networks produced more insights on their performance and behaviour. We found that there is a scope for improvement and hence propose few directions for future efforts.}
 }
 
-@inproceedings{patil2024motion,
+% inproceedings{patil2024motion,
   title={Motion Composition and Interpolation Using Diffusion Models},
   author={Patil, Omkar and Gopalan, Nakul},
   booktitle={RSS 2024 Workshop on Geometric and Algebraic Structure in Robot Learning},
@@ -68,10 +69,11 @@
   ISSN={2153-0866},
   month={Oct},
   preview={div_segm.png},
+  html={https://ieeexplore.ieee.org/document/10802712}
   }
 
 @INPROCEEDINGS{10802753,
-  author={Dube, Ayushi and Patil, Omkar and Singh, Gian and Gopalan, Nakul and Vrudhula, Sarma},
+  author={Dube*, Ayushi and Patil*, Omkar and Singh, Gian and Gopalan, Nakul and Vrudhula, Sarma},
   booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
   title={Hardware-Software Co-Design for Path Planning by Drones}, 
   year={2024},
@@ -85,21 +87,36 @@
   ISSN={2153-0866},
   month={Oct},
   preview={dronepp.png},
+  html={https://ieeexplore.ieee.org/document/10802753}
   }
 
-@misc{patil2024composingdiffusionpoliciesfewshot,
+@article{patil2024composingdiffusionpoliciesfewshot,
       title={Composing Diffusion Policies for Few-shot Learning of Movement Trajectories}, 
       author={Omkar Patil and Anant Sah and Nakul Gopalan},
+      journal={arXiv preprint arXiv:2410.17479},
       year={2024},
       eprint={2410.17479},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2410.17479},
-      selected={true},
+      html={https://arxiv.org/abs/2410.17479},
       bibtex_show={true},
       preview={comp-fsl.jpg},
       abstract={Humans can perform various combinations of physical skills without having to relearn skills from scratch every single time. For example, we can swing a bat when walking without having to re-learn such a policy from scratch by composing the individual skills of walking and bat swinging. Enabling robots to combine or compose skills is essential so they can learn novel skills and tasks faster with fewer real world samples. To this end, we propose a novel compositional approach called DSE- Diffusion Score Equilibrium that enables few-shot learning for novel skills by utilizing a combination of base policy priors. Our method is based on probabilistically composing diffusion policies to better model the few-shot demonstration data-distribution than any individual policy. Our goal here is to learn robot motions few-shot and not necessarily goal oriented trajectories. Unfortunately we lack a general purpose metric to evaluate the error between a skill or motion and the provided demonstrations. Hence, we propose a probabilistic measure - Maximum Mean Discrepancy on the Forward Kinematics Kernel (MMD-FK), that is task and action space agnostic. By using our few-shot learning approach DSE, we show that we are able to achieve a reduction of over 30% in MMD-FK across skills and number of demonstrations. Moreover, we show the utility of our approach through real world experiments by teaching novel trajectories to a robot in 5 demonstrations.},
 }
+
+@inproceedings{patil2025learning,
+  title={Learning Factorized Diffusion Policies for Conditional Action Diffusion},
+  author={Patil, Omkar and Rosen, Eric and Gopalan, Nakul},
+  booktitle={ICRA 2025 Workshop on Foundation Models and Neuro-Symbolic AI for Robotics},
+  year={2025},
+  selected={true},
+  html={https://openreview.net/forum?id=8MGDOQmYRo},
+  bibtex_show={true},
+  preview={dist-rw.png},
+  abstract={Diffusion models have emerged as a promising choice for learning robot skills from demonstrations. However, they face three problems: diffusion models are not sample-efficient, data is expensive to collect in robotics, and the space of tasks is combinatorially large. The established way of learning diffusion policies has little room to accommodate solutions for the aforementioned challenges, in addition to scaling the model size and paired observation-action data. In this work, we propose a novel method for training diffusion models termed ‘Composable Diffusion Guidance’ CoDiG to compositionally learn diffusion policies for robot skills with respect to different observation modalities, such as proprioception, vision and tactile. CoDiG provides more flexibility to deal with such observational modalities, leading to sample-efficiency gains over 20% in applicable tasks. CoDiG opens up more avenues for research on foundation models as it ameliorates the requirement of scaling all the observational modalities together during data collection.},
+}
+
 
 
 %article{PhysRev.47.777,
