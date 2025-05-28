@@ -23,11 +23,19 @@
   },
   "publications": [
     {
+      "name": "Learning Factorized Diffusion Policies for Conditional Action Diffusion",
+      "publisher": "ICRA 2025 Workshop on Foundation Models and Neuro-Symbolic AI for Robotics| Omkar Patil, Eric Rosen, Nakul Gopalan",
+      "releaseDate": "2025-05-01",
+      "website": "https://fdp-policy.github.io/fdp-policy/",
+      "url": "https://openreview.net/forum?id=8MGDOQmYRo",
+      "summary": "A novel method to compositionally learn diffusion policies with respect to different observational modalities, such as proprioception and vision."
+    },
+    {
       "name": "Compositional Few-shot Learning of Motions",
       "publisher": "Compositional Learning Workshop @ NeurIPS 2024 | Omkar Patil, Nakul Gopalan",
       "releaseDate": "2024-10-31",
       "website": "https://sites.google.com/asu.edu/comp-fsl/",
-      "url": "https://sites.google.com/asu.edu/comp-fsl/",
+      "url": "https://openreview.net/forum?id=2wKWrVaC9W",
       "summary": "A novel compositional approach called DSE- Diffusion Score Equilibrium that enables few-shot learning for novel skills by utilizing a combination of base policy priors is presented."
     },
     {
@@ -145,6 +153,7 @@
     {
       "name": "Institute WebOps and MobOps",
       "company": "Institute WebOps and MobOps",
+      "url": "https://github.com/omkarpatil18/iitm_students_app",
       "position": "Head",
       "startDate": "2017-04-30",
       "endDate": "2018-05-31",
@@ -177,7 +186,7 @@
       "organization": "Conferences",
       "position": "Reviewer",
       "startDate": "2023-01-01",
-      "summary": "Reviewer for IROS 2024, ICRA 2025"
+      "summary": "Reviewer for IROS 2024, ICRA 2025, CORL 2025"
     }
   ],
   "awards": [],
