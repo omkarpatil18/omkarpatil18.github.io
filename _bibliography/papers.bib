@@ -41,18 +41,6 @@
   abstract={Visual localization is the task of camera pose estimation, and is crucial for many technologies which involve localization such as mobile robots and augmented reality. Several convolutional neural network models have been proposed for the task against the more accurate geometry based computer vision techniques. However, they have several shortcomings and to our knowledge, this was the first effort that explored the use of an alternative architecture based on capsule-networks for the task. We achieved better results with capsules than with baseline-CNN PoseNet on small NORB dataset, modified for the task of camera pose estimation. Feature visualizations for both the networks produced more insights on their performance and behaviour. We found that there is a scope for improvement and hence propose few directions for future efforts.}
 }
 
-% inproceedings{patil2024motion,
-  title={Motion Composition and Interpolation Using Diffusion Models},
-  author={Patil, Omkar and Gopalan, Nakul},
-  booktitle={RSS 2024 Workshop on Geometric and Algebraic Structure in Robot Learning},
-  year={2024},
-  selected={false},
-  bibtex_show={true},
-  html={https://sites.google.com/asu.edu/comp-styles/},
-  url={https://openreview.net/forum?id=VUFrnwlVC0},
-  preview={comp_styles.png},
-  abstract={Humans have the ability to perform various combinations of skills without having to relearn the overall resulting skill every single time. For example, we prefer to learn easy motions and then combine them in flexible ways to perform complicated movements in dance. Enabling robots to combine or compose skills is essential for their deployment in unstructured environments where they will be required to adapt based on their surroundings. Without such composition robots would have to learn a separate policy for each task which can be combinatorially expensive. To this end, we propose a compositional approach to blend different robot skills using diffusion models. We compose configuration-space diffusion policies for novel motion generation resulting from the corresponding skill combinations. We show that the compositional framework can be utilized to interpolate between different skills leading to greater flexibility in motion. By utilizing interpolation along with composition, we can not only constrain the motion but also generate novel trajectories. We also propose a novel metric based on Maximum Mean Discrepancy and the Forward Kinematics kernel: MMD-FK to quantitatively evaluate the composed robot motion in the task-space while remaining agnostic to the space of policy composition.}
-}
 
 @INPROCEEDINGS{10802712,
   author={Raj, Divyanshu and Patil, Omkar and Gu, Weiwei and Baral, Chitta and Gopalan, Nakul},
@@ -105,18 +93,29 @@
       abstract={Humans can perform various combinations of physical skills without having to relearn skills from scratch every single time. For example, we can swing a bat when walking without having to re-learn such a policy from scratch by composing the individual skills of walking and bat swinging. Enabling robots to combine or compose skills is essential so they can learn novel skills and tasks faster with fewer real world samples. To this end, we propose a novel compositional approach called DSE- Diffusion Score Equilibrium that enables few-shot learning for novel skills by utilizing a combination of base policy priors. Our method is based on probabilistically composing diffusion policies to better model the few-shot demonstration data-distribution than any individual policy. Our goal here is to learn robot motions few-shot and not necessarily goal oriented trajectories. Unfortunately we lack a general purpose metric to evaluate the error between a skill or motion and the provided demonstrations. Hence, we propose a probabilistic measure - Maximum Mean Discrepancy on the Forward Kinematics Kernel (MMD-FK), that is task and action space agnostic. By using our few-shot learning approach DSE, we show that we are able to achieve a reduction of over 30% in MMD-FK across skills and number of demonstrations. Moreover, we show the utility of our approach through real world experiments by teaching novel trajectories to a robot in 5 demonstrations.},
 }
 
-@inproceedings{patil2025learning,
-  title={Learning Factorized Diffusion Policies for Conditional Action Diffusion},
-  author={Patil, Omkar and Rosen, Eric and Gopalan, Nakul},
-  booktitle={ICRA 2025 Workshop on Foundation Models and Neuro-Symbolic AI for Robotics},
+
+@article{gupta2025learning,
+  title={Learning Sequential Kinematic Models from Demonstrations for Multi-Jointed Articulated Objects},
+  author={Gupta, Anmol and Gu, Weiwei and Patil, Omkar and Lee, Jun Ki and Gopalan, Nakul},
+  journal={arXiv preprint arXiv:2505.06363},
   year={2025},
-  selected={true},
-  html={https://openreview.net/forum?id=8MGDOQmYRo},
+  html={https://arxiv.org/abs/2505.06363},
   bibtex_show={true},
-  preview={dist-rw.png},
-  abstract={Diffusion models have emerged as a promising choice for learning robot skills from demonstrations. However, they face three problems: diffusion models are not sample-efficient, data is expensive to collect in robotics, and the space of tasks is combinatorially large. The established way of learning diffusion policies has little room to accommodate solutions for the aforementioned challenges, in addition to scaling the model size and paired observation-action data. In this work, we propose a novel method for training diffusion models termed ‘Composable Diffusion Guidance’ CoDiG to compositionally learn diffusion policies for robot skills with respect to different observation modalities, such as proprioception, vision and tactile. CoDiG provides more flexibility to deal with such observational modalities, leading to sample-efficiency gains over 20% in applicable tasks. CoDiG opens up more avenues for research on foundation models as it ameliorates the requirement of scaling all the observational modalities together during data collection.},
+  preview={anmol.png},
+  abstract={As robots become more generalized and deployed in diverse environments, they must interact with complex objects—many with multiple independent joints or degrees of freedom (DoF) requiring precise control. A common strategy is object modeling, where compact state-space models are learned from real-world observations and paired with classical planning. However, existing methods often rely on prior knowledge or focus on single-DoF objects, limiting their applicability. They also fail to handle occluded joints and ignore the manipulation sequences needed to access them. We address this by learning object models from human demonstrations. We introduce Object Kinematic Sequence Machines (OKSMs), a novel representation capturing both kinematic constraints and manipulation order for multi-DoF objects. To estimate these models from point-cloud data, we present Pokenet, a deep neural network trained on human demonstrations. We validate our approach on 8,000 simulated and 1,600 real-world annotated samples. Pokenet improves joint axis and state estimation by over 20% on real-world data compared to prior methods. Finally, we demonstrate OKSMs on a Sawyer robot using inverse kinematics-based planning to manipulate multi-DoF objects.},
 }
 
+@article{patil2025factorizing,
+  title={Factorizing Diffusion Policies for Observation Modality Prioritization},
+  author={Patil, Omkar and Rath, Prabin and Pangaonkar, Kartikay and Rosen, Eric and Gopalan, Nakul},
+  journal={arXiv preprint arXiv:2509.16830},
+  year={2025},
+  selected={true},
+  html={https://arxiv.org/abs/2509.16830},
+  bibtex_show={true},
+  preview={dist-rw.png},
+  abstract={Diffusion models have been extensively leveraged for learning robot skills from demonstrations. These policies are conditioned on several observational modalities such as proprioception, vision, and tactile. However, observational modalities have varying levels of influence for different tasks that diffusion policies fail to capture. In this work, we propose Factorized Diffusion Policies (FDP), a novel policy formulation that enables observational modalities to have differing influence on the action diffusion process by design. This results in learning policies where certain observation modalities can be prioritized over others, such as vision > tactile or proprioception > vision. FDP achieves modality prioritization by factorizing the observational conditioning for the diffusion process, resulting in more performant and robust policies. Our factored approach shows strong performance improvements in low-data regimes, with a 15% absolute improvement in success rate on several simulated benchmarks when compared to a standard diffusion policy that jointly conditions on all input modalities. Moreover, our benchmark and real-world experiments show that factored policies are naturally more robust, with a 40% higher absolute success rate across several visuomotor tasks under distribution shifts such as visual distractors or camera occlusions, where existing diffusion policies fail catastrophically. FDP thus offers a safer and more robust alternative to standard diffusion policies for real-world deployment. Videos are available at https://fdp-policy.github.io/fdp-policy/.},
+}
 
 
 %article{PhysRev.47.777,

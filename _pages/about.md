@@ -18,6 +18,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi there! I'm a PhD student @ ASU working in the <a href="https://logos-robotics-lab.github.io/">Logos Robotics Lab</a> under the guidance of <a href="https://nakulgopalan.github.io/">Dr. Nakul Gopalan</a>. My main focus area is compositional robot learning, where I try to develop methods that utilize the principle of compositionality to learn skills efficiently. Prior to joining ASU, I worked for 3 years at Wells Fargo where I did a variety of research in NLP. In my previous life, I did my undergraduate and master's from IIT Madras (India), focusing on Robotics. My master's thesis was done under the guidance of <a href="https://www.cse.iitm.ac.in/~amittal/">Dr. Anurag Mittal</a>.
+Hi there! I'm a PhD student @ ASU working in the <a href="https://logos-robotics-lab.github.io/">Logos Robotics Lab</a> headed by <a href="https://nakulgopalan.github.io/">Dr. Nakul Gopalan</a>. My research focus is compositional robot learning, where I develop methods that leverage the principle of compositionality for robot manipulation.
 
-Apart from my work, I love hiking and have done several extensive hikes in the Himalayas and plan to do some more in the US! I have a strong liking for landscapes and nature.
+In Fall 2025, I spent a semester at <a href="https://rai-inst.com/">RAI Institute</a> as a part of the **Compose** team, working on long horizon manipulation.
+
+I completed my undergraduate and master’s degrees in Mechanical Engineering and Robotics at IIT Madras (India), where I worked with <a href="https://www.cse.iitm.ac.in/~amittal/">Dr. Anurag Mittal</a> for my master's thesis exploring the applications of capsule networks. Before starting my PhD, I spent 3 years at Wells Fargo where I did a variety of research in NLP.
+
+Apart from my work, I enjoy hiking and have done several extensive hikes in the Himalayas and plan to do some more in the US! I have a strong liking for landscapes and nature.
