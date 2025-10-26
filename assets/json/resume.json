@@ -33,7 +33,7 @@
     },
     {
       "name": "Learning Sequential Kinematic Models from Demonstrations for Multi-Jointed Articulated Objects",
-      "publisher": "arxiv | Anmol Gupta, Weiwei Gu, Omkar Patil, Jun Ki Lee, Nakul Gopalan",
+      "publisher": "Arxiv | Anmol Gupta, Weiwei Gu, Omkar Patil, Jun Ki Lee, Nakul Gopalan",
       "releaseDate": "2025-05-09",
       "url": "https://arxiv.org/abs/2505.06363",
       "summary": "Framework that learns kinematic constraints and manipulation sequences of multi-DoF objects from human demonstrations."
