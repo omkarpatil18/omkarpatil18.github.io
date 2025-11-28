@@ -17,7 +17,7 @@
     },
     "profiles": [
       {
-        "network": "LinkedIn",
+        "network": "linkedin",
         "username": "omkar-patil-957958134",
         "url": "https://www.linkedin.com/in/omkar-patil-957958134/"
       }
@@ -86,7 +86,7 @@
       "endDate": "2028-05-31",
       "gpa": "3.9",
       "courses": [
-        "Planning/Learning Methods for AI",
+        "Planning and Learning Methods for AI",
         "Knowledge Representation and Reasoning"
       ]
     },
@@ -122,8 +122,11 @@
       "position": "Graduate Intern",
       "startDate": "2025-09-08",
       "endDate": "2026-01-11",
-      "highlights": [],
-      "summary": "Fall intern in the Compose team working on long-horizon manipulation",
+      "highlights": [
+        "Research at the intersection of performance improvement and steering for robot policies.",
+        "Methodologies used include generative modeling (diffusion/flow) and reinforcement learning."
+      ],
+      "summary": "Fall intern in the Compose research group, focusing on robot learning.",
       "location": "Cambridge, MA",
       "website": "https://rai-inst.com/"
     },
@@ -133,7 +136,10 @@
       "position": "Graduate Research Assistant",
       "startDate": "2023-08-01",
       "endDate": "",
-      "highlights": [],
+      "highlights": [
+        "Developing robot learning algorithms that leverage compositionality for sample-efficient generalization.",
+        "Developed a ROS2-based multi-drone formation and behavior control system in AirSim."
+      ],
       "summary": "Research assistant in Dr. Nakul Gopalan's lab at Arizona State University.",
       "location": "Tempe, Arizona",
       "website": "https://logos-robotics-lab.github.io/"
@@ -141,10 +147,10 @@
     {
       "company": "Wells Fargo",
       "name": "Wells Fargo",
-      "position": "Senior Quantitative Analytics Specialist",
+      "position": "Senior NLP Quant",
       "startDate": "2022-10-31",
       "endDate": "2023-07-31",
-      "summary": "Member of the Artificial Intelligence and Automation team within Corporate Model Risk.",
+      "summary": "Member of the Artificial Intelligence and Automation within Corporate Model Risk.",
       "highlights": [
         "Researched and implemented prompt-tuning on language models for generating different kinds of paraphrases for downstream applications such as robustness testing.",
         "Collaborated with other researchers within the team to develop methodologies for evaluating model weaknesses with a special focus on text classification models."
@@ -154,10 +160,10 @@
     {
       "company": "Wells Fargo",
       "name": "Wells Fargo",
-      "position": "Quantitative Analytics Specialist",
+      "position": "NLP Quant",
       "startDate": "2020-08-31",
       "endDate": "2022-10-31",
-      "summary": "Member of the Artificial Intelligence and Automation team within Corporate Model Risk.",
+      "summary": "Member of the Artificial Intelligence and Automation within Corporate Model Risk.",
       "highlights": [
         "Explored text generation for the task of paraphrasing and developed a new metric to evaluate the quality of paraphrases.",
         "Surveyed various document automation frameworks present in literature.",
@@ -171,7 +177,7 @@
       "position": "Research Intern",
       "startDate": "2018-05-31",
       "endDate": "2018-07-31",
-      "summary": "Survey research on amorphous metals in the Additive Manufacturing team.",
+      "summary": "Survey research on amorphous metals in the Additive Manufacturing group.",
       "highlights": [
         "Performed extensive literature review to put forward Eaton products that could benefit from amorphous metals.",
         "Enhanced cold spray simulation capability by creating a Python script for the fluid dynamics part of the simulation"
@@ -187,10 +193,9 @@
       "endDate": "2018-05-31",
       "summary": "Lead of the official mobile development team of IIT Madras.",
       "highlights": [
-        "Led a team of 9 students for the development of the ‘Students App’, managing a budget of ~INR 3L.",
+        "Led a 9 member team for the development of the ‘Students App’, managing a budget of ~INR 3L.",
         "Increased the number of active users by ~160%, to 6500+ students, with 12000+ downloads in total.",
-        "Developed a sophisticated Java front-end and PHP back-end to build a secure and useful application on Android.",
-        "Introduced innovative features such as a complaints portal, institute-attuned timetable, and calendar"
+        "Developed a sophisticated Java front-end and PHP back-end to build a secure and useful application on Android."
       ],
       "location": "Chennai, India"
     }

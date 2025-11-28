@@ -18837,49 +18837,16 @@ var render = (resume) => {
   <title>${resume.basics.name} - Resume</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: LatinModern;
-      font-style: normal;
-      font-weight: normal;
-      src: url("/fonts/lmroman10-regular.otf") format("opentype");
-    }
-
-    @font-face {
-      font-family: LatinModern;
-      font-weight: bold;
-      src: url("/fonts/lmroman10-bold.otf") format("opentype");
-    }
-
-    @font-face {
-      font-family: LatinModern;
-      font-style: italic;
-      src: url("/fonts/lmroman10-italic.otf") format("opentype");
-    }
-
-     @font-face {
-      font-family: LatinModernSans;
-      font-style: normal;
-      font-weight: normal;
-      src: url("/fonts/lmsans10-regular.otf") format("opentype");
-    }
-
-    @font-face {
-      font-family: LatinModernSans;
-      font-weight: bold;
-      src: url("/fonts/lmsans10-bold.otf") format("opentype");
-    }
-
-    @font-face {
-      font-family: LatinModernSans;
-      font-style: italic;
-      src: url("/fonts/lmsans10-italic.otf") format("opentype");
-    }
-
     html {
-      font-family:LatinModern, "Courier New", monospace;
+      font-family: 'Roboto', Arial, sans-serif;
       background: #fff;
       font-size: 10px;
+      letter-spacing: 0.5px;
+      word-spacing: 1.5px;
     }
 
     h2 {
@@ -18893,7 +18860,7 @@ var render = (resume) => {
 
     p, li {
       font-size: 1.4rem;
-      line-height: 1.5rem;
+      line-height: 1.6rem;
     }
 
     .secondary {
