@@ -172,19 +172,6 @@
       "location": "Bengaluru, India"
     },
     {
-      "name": "Eaton",
-      "company": "Eaton",
-      "position": "Research Intern",
-      "startDate": "2018-05-31",
-      "endDate": "2018-07-31",
-      "summary": "Survey research on amorphous metals in the Additive Manufacturing group.",
-      "highlights": [
-        "Performed extensive literature review to put forward Eaton products that could benefit from amorphous metals.",
-        "Enhanced cold spray simulation capability by creating a Python script for the fluid dynamics part of the simulation"
-      ],
-      "location": "Pune, India"
-    },
-    {
       "name": "Institute WebOps and MobOps",
       "company": "Institute WebOps and MobOps",
       "url": "https://github.com/omkarpatil18/iitm_students_app",
@@ -226,17 +213,27 @@
       "name": "Robotics",
       "level": "",
       "keywords": [
-        "Robot Learning",
-        "Generative Modeling",
-        "Compositional Learning"
+        "Motion Planning (IK, Trajectory Optimization)",
+        "Perception (Vision, Point Clouds), Control (Position, Operational Space)",
+        "Robotics Stack (ROS2, MuJoCo, Isaac Sim, Gazebo)"
+      ]
+    },
+    {
+      "name": "Robot Learning",
+      "level": "",
+      "keywords": [
+        "ML Tooling (PyTorch, JAX, W&B), Systems (Python, Linux, Docker, Git)",
+        "Generative Modeling (Diffusion, Flows)",
+        "Reinforcement Learning (Offline RL, SAC, PPO)"
       ]
     },
     {
       "name": "Natural Language Processing",
       "level": "",
       "keywords": [
+        "NLP Tooling (HuggingFace, NLTK, SpaCy)",
         "Human-robot Interaction",
-        "Robustness"
+        "Robustness, Intepretability, Explainability"
       ]
     }
   ],
