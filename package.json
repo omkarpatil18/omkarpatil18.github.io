@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.4.0",
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "resume-cli": "^3.0.8"
   },
   "dependencies": {
     "jsonresume-theme-professional": "^1.1.0"

@@ -80,7 +80,7 @@
   "education": [
     {
       "institution": "Arizona State University",
-      "area": "Computer Science",
+      "area": "Computer Science (3.9/4.0 GPA)",
       "studyType": "Doctor of Philosophy",
       "startDate": "2023-08-31",
       "endDate": "2028-05-31",
@@ -92,7 +92,7 @@
     },
     {
       "institution": "Indian Institute of Technology, Madras",
-      "area": "Robotics and AI",
+      "area": "Robotics and AI (8.22/10 GPA)",
       "studyType": "Master of Technology",
       "startDate": "2018-07-31",
       "endDate": "2020-05-31",
@@ -104,7 +104,7 @@
     },
     {
       "institution": "Indian Institute of Technology, Madras",
-      "area": "Mechanical Engineering",
+      "area": "Mechanical Engineering (8.22/10 GPA)",
       "studyType": "Bachelor of Technology",
       "startDate": "2015-12-31",
       "endDate": "2019-12-31",
