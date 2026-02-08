@@ -26,15 +26,15 @@
   "publications": [
     {
       "name": "Factorizing Diffusion Policies for Observation Modality Prioritization",
-      "publisher": "ICRA 2025 Workshop on Foundation Models and Neuro-Symbolic AI for Robotics| Omkar Patil, Prabin Rath, Kartikay Pangaonkar, Eric Rosen, Nakul Gopalan",
-      "releaseDate": "2025-05-01",
+      "publisher": "ICRA 2026 | Omkar Patil, Prabin Rath, Kartikay Pangaonkar, Eric Rosen, Nakul Gopalan",
+      "releaseDate": "2026-05-01",
       "url": "https://arxiv.org/abs/2509.16830",
       "summary": "Method to prioritize observational modalities, such as vision over tactile for learning diffusion policies."
     },
     {
       "name": "Learning Sequential Kinematic Models from Demonstrations for Multi-Jointed Articulated Objects",
-      "publisher": "Arxiv | Anmol Gupta, Weiwei Gu, Omkar Patil, Jun Ki Lee, Nakul Gopalan",
-      "releaseDate": "2025-05-09",
+      "publisher": "ICRA 2026 | Anmol Gupta, Weiwei Gu, Omkar Patil, Jun Ki Lee, Nakul Gopalan",
+      "releaseDate": "2026-05-01",
       "url": "https://arxiv.org/abs/2505.06363",
       "summary": "Framework that learns kinematic constraints and manipulation sequences of multi-DoF objects from human demonstrations."
     },
@@ -205,7 +205,7 @@
       "organization": "Conferences",
       "position": "Reviewer",
       "startDate": "2023-01-01",
-      "summary": "Reviewer for IROS 2024, ICRA 2025, CORL 2025"
+      "summary": "Reviewer for IROS 2024, ICRA 2025, CORL 2025, ICRA 2026"
     }
   ],
   "skills": [
