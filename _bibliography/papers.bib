@@ -95,14 +95,14 @@
 
 
 @article{gupta2025learning,
-  title={Learning Sequential Kinematic Models from Demonstrations for Multi-Jointed Articulated Objects},
+  title={PokeNet: Learning Kinematic Models of Articulated Objects from Human Observations},
   author={Gupta, Anmol and Gu, Weiwei and Patil, Omkar and Lee, Jun Ki and Gopalan, Nakul},
   journal={IEEE International Conference on Robotics and Automation (ICRA)},
   year={2026},
-  html={https://arxiv.org/abs/2505.06363},
+  html={https://arxiv.org/abs/2602.02741},
   bibtex_show={true},
   preview={anmol.png},
-  abstract={As robots become more generalized and deployed in diverse environments, they must interact with complex objects—many with multiple independent joints or degrees of freedom (DoF) requiring precise control. A common strategy is object modeling, where compact state-space models are learned from real-world observations and paired with classical planning. However, existing methods often rely on prior knowledge or focus on single-DoF objects, limiting their applicability. They also fail to handle occluded joints and ignore the manipulation sequences needed to access them. We address this by learning object models from human demonstrations. We introduce Object Kinematic Sequence Machines (OKSMs), a novel representation capturing both kinematic constraints and manipulation order for multi-DoF objects. To estimate these models from point-cloud data, we present Pokenet, a deep neural network trained on human demonstrations. We validate our approach on 8,000 simulated and 1,600 real-world annotated samples. Pokenet improves joint axis and state estimation by over 20% on real-world data compared to prior methods. Finally, we demonstrate OKSMs on a Sawyer robot using inverse kinematics-based planning to manipulate multi-DoF objects.},
+  abstract={Articulation modeling enables robots to learn how an object's joints move so they can manipulate it effectively. PokeNet is an end-to-end framework that learns articulation models from a single human demonstration without prior object knowledge. From point cloud sequences, it predicts joint parameters, infers manipulation order, and tracks joint states over time.},
 }
 
 @article{patil2025factorizing,
