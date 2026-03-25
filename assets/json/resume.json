@@ -25,6 +25,27 @@
   },
   "publications": [
     {
+      "name": "You've Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector",
+      "publisher": "Arxiv | Omkar Patil, Ondrej Biza, Thomas Weng, Karl Schmeckpeper, Wil Thomason, Xiaohan Zhang, Robin Walters, Nakul Gopalan, Sebastian Castro, Eric Rosen",
+      "releaseDate": "2026-03-01",
+      "url": "https://arxiv.org/abs/2603.15757",
+      "summary": "Search method to find a single constant noise vector (golden ticket) that improves pretrained diffusion/flow matching robot policies without any retraining."
+    },
+    {
+      "name": "StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models",
+      "publisher": "Arxiv | Kartikay Pangaonkar*, Prabin Rath*, Omkar Patil*, Nakul Gopalan",
+      "releaseDate": "2026-03-01",
+      "url": "https://arxiv.org/abs/2603.20659",
+      "summary": "Training-free approach to improve pretrained VLA policy performance by manipulating the environment's initial state using VLM-based in-context reasoning."
+    },
+    {
+      "name": "Meanings and Measurements: Multi-Agent Probabilistic Grounding for Vision-Language Navigation",
+      "publisher": "Arxiv | Swagat Padhan, Lakshya Jain, Bhavya Shah, Omkar Patil, Thao Nguyen, Nakul Gopalan",
+      "releaseDate": "2026-03-01",
+      "url": "https://arxiv.org/abs/2603.19166",
+      "summary": "Agentic framework (MAPG) that decomposes metric-semantic language queries and probabilistically composes grounded outputs for physically consistent decisions in 3D space."
+    },
+    {
       "name": "Factorizing Diffusion Policies for Observation Modality Prioritization",
       "publisher": "ICRA 2026 | Omkar Patil, Prabin Rath, Kartikay Pangaonkar, Eric Rosen, Nakul Gopalan",
       "releaseDate": "2026-05-01",
