@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 5
 cv_pdf: resume.pdf
-description: My primary interests are in robotics and natural language processsing. I'm especially interested in enabling robots to learn new skills efficiently from human interactions in the unstructured world.
+description: My primary interest is in developing general purpose robots that can learn new skills on the fly. I believe compositional / modular learning and policy improvement will be crucial in enabling this.
 toc:
   sidebar: left
 ---

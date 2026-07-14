@@ -1,0 +1,65 @@
+{% assign videos = site.data.youtube_videos %}
+{% if videos and videos.size > 0 %}
+  <div class="video-carousel">
+    <div class="video-carousel-head">
+      <h2>videos</h2>
+      <div class="video-carousel-nav">
+        <button type="button" class="video-nav-btn video-prev" aria-label="Scroll to previous videos">&lsaquo;</button>
+        <button type="button" class="video-nav-btn video-next" aria-label="Scroll to next videos">&rsaquo;</button>
+      </div>
+    </div>
+
+    <div class="video-track">
+      {% for video in videos %}
+        <figure class="video-card" data-video-id="{{ video.id }}">
+          <button type="button" class="video-thumb" aria-label="Play {{ video.title | escape }}">
+            <img src="{{ video.thumbnail }}" alt="{{ video.title | escape }}" loading="lazy" width="480" height="360">
+            <span class="video-play" aria-hidden="true"></span>
+          </button>
+          <figcaption>
+            <a href="{{ video.url }}">{{ video.title }}</a>
+            <span class="video-date">{{ video.published | date: "%b %d, %Y" }}</span>
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+
+    <p class="video-channel-link">
+      <a href="https://www.youtube.com/channel/{{ site.youtube_channel_id }}">See all videos on YouTube</a>
+    </p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const track = document.querySelector(".video-track");
+      if (!track) return;
+
+      // Swap the thumbnail for a player only on click, so no YouTube iframe (and
+      // none of its tracking) is loaded unless the visitor asks for the video.
+      track.querySelectorAll(".video-thumb").forEach(function (button) {
+        button.addEventListener("click", function () {
+          const card = button.closest(".video-card");
+          const frame = document.createElement("iframe");
+          frame.src = "https://www.youtube-nocookie.com/embed/" + card.dataset.videoId + "?autoplay=1&rel=0";
+          frame.title = card.querySelector("figcaption a").textContent.trim();
+          frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          frame.allowFullscreen = true;
+          button.replaceWith(frame);
+        });
+      });
+
+      const scrollStep = function () {
+        const card = track.querySelector(".video-card");
+        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        return card.getBoundingClientRect().width + gap;
+      };
+
+      document.querySelector(".video-prev").addEventListener("click", function () {
+        track.scrollBy({ left: -scrollStep(), behavior: "smooth" });
+      });
+      document.querySelector(".video-next").addEventListener("click", function () {
+        track.scrollBy({ left: scrollStep(), behavior: "smooth" });
+      });
+    });
+  </script>
+{% endif %}

@@ -16,7 +16,11 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{$white-color};
+  // Slightly off the page background, so publication cards read as raised.
+  --global-publication-bg-color: #f7f8f9;
   --global-highlight-color: #{$red-color-dark};
+  // Award / oral-presentation badge on publications.
+  --global-award-color: #1a7f37;
   --global-back-to-top-bg-color: rgba(#{red($black-color)},
     #{green($black-color)},
     #{blue($black-color)},
@@ -85,6 +89,10 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
+  --global-publication-bg-color: #{$grey-900};
+  // The light-theme highlight is a deep red that disappears on a dark page.
+  --global-highlight-color: #{$red-color};
+  --global-award-color: #{$green-color};
   --global-back-to-top-bg-color: rgba(#{red($white-color)},
     #{green($white-color)},
     #{blue($white-color)},

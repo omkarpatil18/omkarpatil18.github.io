@@ -1,0 +1,18 @@
+# Research topics used to color-code and filter publications.
+# Tag an entry in _bibliography/papers.bib with `topic = {key}`, or with a
+# comma-separated list for several: `topic = {key-one, key-two}`.
+# Each key must match one below; `name` is the label shown on the badge and the
+# filter button, `color` is its background (needs contrast against white text).
+# Untagged papers show no badge and appear only when no filter is selected.
+
+compositional-learning:
+  name: Compositional Learning
+  color: "#1f6feb"
+
+policy-improvement:
+  name: Policy Improvement
+  color: "#8250df"
+
+robotics-systems:
+  name: Robotics Systems
+  color: "#a4243b"

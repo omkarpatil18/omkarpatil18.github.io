@@ -654,10 +654,195 @@ footer.sticky-bottom {
   }
 }
 
+// YouTube carousel (blog page)
+
+.video-carousel {
+  margin-top: 3rem;
+
+  .video-carousel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 1.25rem;
+
+    h2 {
+      margin: 0;
+      padding-bottom: 0.5rem;
+      color: var(--global-divider-color);
+      font-size: 1.5rem;
+    }
+  }
+
+  .video-nav-btn {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.25rem;
+    padding: 0;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--global-text-color);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+  }
+
+  // Scroll-snap strip: no carousel library needed, and it stays swipeable on
+  // touch devices where the arrows are not used.
+  .video-track {
+    display: flex;
+    column-gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 0.75rem;
+    scrollbar-width: thin;
+  }
+
+  .video-card {
+    flex: 0 0 clamp(240px, 45%, 300px);
+    scroll-snap-align: start;
+    margin: 0;
+
+    .video-thumb {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: none;
+      line-height: 0;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        // Crop the pillarboxing YouTube bakes into its 4:3 thumbnails.
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .video-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3.4rem;
+        height: 2.4rem;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.65);
+        transition: background-color 0.2s ease;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-40%, -50%);
+          border-style: solid;
+          border-width: 0.5rem 0 0.5rem 0.85rem;
+          border-color: transparent transparent transparent #fff;
+        }
+      }
+
+      &:hover .video-play {
+        background-color: #f00;
+      }
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      line-height: 1.35;
+
+      a {
+        color: var(--global-text-color);
+
+        &:hover {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+
+    .video-date {
+      display: block;
+      margin-top: 0.2rem;
+      color: var(--global-text-color-light);
+      font-size: 0.8rem;
+    }
+  }
+
+  .video-channel-link {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
 // Publications
 
 .publications {
   margin-top: 2rem;
+
+  .topic-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .topic-toggle,
+  .topic-clear {
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .topic-toggle {
+    border: 1px solid var(--topic-color);
+    color: var(--topic-color);
+
+    &:hover,
+    &.active {
+      background-color: var(--topic-color);
+      color: #fff;
+    }
+  }
+
+  .topic-clear {
+    border: 1px solid var(--global-text-color-light);
+    color: var(--global-text-color-light);
+
+    &:hover {
+      border-color: var(--global-text-color);
+      color: var(--global-text-color);
+    }
+  }
 
   h1 {
     color: var(--global-theme-color);
@@ -689,13 +874,49 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 8px;
+      background-color: var(--global-publication-bg-color);
 
+      // Vertically centre the text against the fixed-height preview.
+      > .row {
+        align-items: center;
+      }
+
+      // Fixed box for every preview, whatever its aspect ratio. `contain` keeps
+      // wide method diagrams uncropped; the white mat matches their background.
       .preview {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        background-color: #fff;
+        padding: 0.35rem;
+      }
+
+      .topic {
+        margin-bottom: 0.25rem;
+      }
+
+      .topic-badge {
+        display: inline-block;
+        padding: 0.15rem 0.5rem;
+        border-radius: 4px;
+        background-color: var(--global-theme-color);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
       }
 
       .abbr {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
+
+        figure {
+          margin-bottom: 0;
+        }
 
         abbr {
           display: inline-block;
@@ -763,8 +984,29 @@ footer.sticky-bottom {
             border-color: var(--global-theme-color);
           }
         }
+        // Filled, so an award reads as a badge rather than as one more button.
+        // The extra class beats the generic .is-open rule below on specificity,
+        // which keeps it award-coloured while its panel is open.
         a.award.btn {
-          border-color: var(--global-highlight-color);
+          margin-left: 0.5rem;
+          background-color: var(--global-award-color);
+          border-color: var(--global-award-color);
+          color: #fff;
+          font-weight: 600;
+
+          &:hover,
+          &.is-open {
+            background-color: transparent;
+            border-color: var(--global-award-color);
+            color: var(--global-award-color);
+          }
+        }
+
+        // Button whose panel is currently expanded.
+        a.btn.is-open {
+          background-color: var(--global-divider-color);
+          border-color: var(--global-text-color);
+          color: var(--global-text-color);
         }
       }
 
@@ -815,19 +1057,22 @@ footer.sticky-bottom {
         transition: all 0.15s ease;
       }
 
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
+      // No border: collapsed, its 0-height box still paints as a stray line.
+      div.abstract.hidden,
+      div.abstract.hidden.open {
+        border: none;
       }
 
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
+      // Breathing room between the preview and an expanded panel. Only when
+      // open — a margin on the collapsed box is not clipped by overflow.
+      .entry-details .hidden.open {
+        margin-top: 1rem;
       }
     }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
+    // No border: collapsed, its 0-height box still paints as a stray line.
+    div.award.hidden,
     div.award.hidden.open {
-      border-color: var(--global-highlight-color);
+      border: none;
     }
   }
 }

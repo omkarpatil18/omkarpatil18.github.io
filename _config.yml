@@ -12,7 +12,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: robotics, nlp, compositon # add your own keywords or leave empty
+keywords: robotics, nlp, compositional robot learning # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: pc.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -170,6 +170,15 @@ disqus_shortname: al-folio # put your disqus shortname
 external_sources:
   - name: medium.com
     rss_url: https://medium.com/@omkarpatil18/feed
+
+# -----------------------------------------------------------------------------
+# YouTube
+# -----------------------------------------------------------------------------
+
+# Channel whose latest uploads are shown in the video carousel on the blog page.
+# Leave blank to hide the section. YouTube's public RSS feed only exposes the 15
+# most recent uploads, so that is the ceiling on how many can be listed.
+youtube_channel_id: UCfUTaHV0NFdNGeo_oz-_YPA
   # - name: Google Blog
   #   posts:
   #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
@@ -333,8 +342,9 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
+  group_by: none
+  sort_by: year
+  order: descending
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
@@ -367,6 +377,7 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    topic,
     video,
     website,
   ]

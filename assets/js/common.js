@@ -1,19 +1,32 @@
 $(document).ready(function () {
   // add toggle functionality to abstract, award and bibtex buttons
+  // The panels live in their own full-width cell of the entry row, so scope the
+  // lookup to the row rather than to the button's own column.
+  // `is-open` marks the button whose panel is showing; only one can be open at
+  // a time, so the other buttons in the same entry are always cleared.
   $("a.abstract").click(function () {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+    var $row = $(this).closest(".row");
+    $row.find(".abstract.hidden").toggleClass("open");
+    $row.find(".award.hidden.open").toggleClass("open");
+    $row.find(".bibtex.hidden.open").toggleClass("open");
+    $row.find("a.award, a.bibtex").removeClass("is-open");
+    $(this).toggleClass("is-open");
   });
   $("a.award").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+    var $row = $(this).closest(".row");
+    $row.find(".abstract.hidden.open").toggleClass("open");
+    $row.find(".award.hidden").toggleClass("open");
+    $row.find(".bibtex.hidden.open").toggleClass("open");
+    $row.find("a.abstract, a.bibtex").removeClass("is-open");
+    $(this).toggleClass("is-open");
   });
   $("a.bibtex").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
+    var $row = $(this).closest(".row");
+    $row.find(".abstract.hidden.open").toggleClass("open");
+    $row.find(".award.hidden.open").toggleClass("open");
+    $row.find(".bibtex.hidden").toggleClass("open");
+    $row.find("a.abstract, a.award").removeClass("is-open");
+    $(this).toggleClass("is-open");
   });
   $("a").removeClass("waves-effect waves-light");
 

@@ -193,4 +193,6 @@ pagination:
 {% include pagination.liquid %}
 {% endif %}
 
+{% include youtube_carousel.liquid %}
+
 </div>

@@ -26,15 +26,15 @@
   "publications": [
     {
       "name": "You've Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector",
-      "publisher": "Arxiv | Omkar Patil, Ondrej Biza, Thomas Weng, Karl Schmeckpeper, Wil Thomason, Xiaohan Zhang, Robin Walters, Nakul Gopalan, Sebastian Castro, Eric Rosen",
+      "publisher": "Arxiv | Omkar Patil, Ondrej Biza, Thomas Weng, Karl Schmeckpeper, Wil Thomason, Xiaohan Zhang, Kausik Sivakumar, Robin Walters, Nakul Gopalan, Sebastian Castro, Stephen Hart, Eric Rosen",
       "releaseDate": "2026-03-01",
       "url": "https://arxiv.org/abs/2603.15757",
       "summary": "Search method to find a single constant noise vector (golden ticket) that improves pretrained diffusion/flow matching robot policies without any retraining."
     },
     {
       "name": "StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models",
-      "publisher": "Arxiv | Kartikay Pangaonkar*, Prabin Rath*, Omkar Patil*, Nakul Gopalan",
-      "releaseDate": "2026-03-01",
+      "publisher": "IROS 2026 | Kartikay Pangaonkar*, Prabin Rath*, Omkar Patil*, Nakul Gopalan",
+      "releaseDate": "2026-10-01",
       "url": "https://arxiv.org/abs/2603.20659",
       "summary": "Training-free approach to improve pretrained VLA policy performance by manipulating the environment's initial state using VLM-based in-context reasoning."
     },
