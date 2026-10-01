@@ -7,11 +7,12 @@
     "picture": "https://omkarpatil18.github.io/assets/img/prof_pic.jpg",
     "email": "opatil3@asu.edu",
     "website": "https://omkarpatil18.github.io/",
+    "url": "https://omkarpatil18.github.io/",
     "phone": "",
     "summary": "I completed my Bachelor’s and Master’s degrees at IIT Madras, where I built a strong foundation in robotics and machine learning. I am currently pursuing my Ph.D. at Arizona State University (ASU) in Dr. Nakul Gopalan’s lab, focusing on robot learning, particularly methods that leverage compositionality to build generalizable manipulation skills.",
     "location": {
       "city": "Tempe",
-      "region": "Arizona",
+      "region": "AZ",
       "countryCode": "US",
       "address": "Tempe, United States"
     },
@@ -20,192 +21,107 @@
         "network": "linkedin",
         "username": "omkar-patil-957958134",
         "url": "https://www.linkedin.com/in/omkar-patil-957958134/"
+      },
+      {
+        "network": "google scholar",
+        "username": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=L7oegpMAAAAJ"
       }
     ]
   },
-  "publications": [
-    {
-      "name": "You've Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector",
-      "publisher": "Arxiv | Omkar Patil, Ondrej Biza, Thomas Weng, Karl Schmeckpeper, Wil Thomason, Xiaohan Zhang, Kausik Sivakumar, Robin Walters, Nakul Gopalan, Sebastian Castro, Stephen Hart, Eric Rosen",
-      "releaseDate": "2026-03-01",
-      "url": "https://arxiv.org/abs/2603.15757",
-      "summary": "Search method to find a single constant noise vector (golden ticket) that improves pretrained diffusion/flow matching robot policies without any retraining."
-    },
-    {
-      "name": "StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models",
-      "publisher": "IROS 2026 | Kartikay Pangaonkar*, Prabin Rath*, Omkar Patil*, Nakul Gopalan",
-      "releaseDate": "2026-10-01",
-      "url": "https://arxiv.org/abs/2603.20659",
-      "summary": "Training-free approach to improve pretrained VLA policy performance by manipulating the environment's initial state using VLM-based in-context reasoning."
-    },
-    {
-      "name": "Meanings and Measurements: Multi-Agent Probabilistic Grounding for Vision-Language Navigation",
-      "publisher": "Arxiv | Swagat Padhan, Lakshya Jain, Bhavya Shah, Omkar Patil, Thao Nguyen, Nakul Gopalan",
-      "releaseDate": "2026-03-01",
-      "url": "https://arxiv.org/abs/2603.19166",
-      "summary": "Agentic framework (MAPG) that decomposes metric-semantic language queries and probabilistically composes grounded outputs for physically consistent decisions in 3D space."
-    },
-    {
-      "name": "Factorizing Diffusion Policies for Observation Modality Prioritization",
-      "publisher": "ICRA 2026 | Omkar Patil, Prabin Rath, Kartikay Pangaonkar, Eric Rosen, Nakul Gopalan",
-      "releaseDate": "2026-05-01",
-      "url": "https://arxiv.org/abs/2509.16830",
-      "summary": "Method to prioritize observational modalities, such as vision over tactile for learning diffusion policies."
-    },
-    {
-      "name": "Learning Sequential Kinematic Models from Demonstrations for Multi-Jointed Articulated Objects",
-      "publisher": "ICRA 2026 | Anmol Gupta, Weiwei Gu, Omkar Patil, Jun Ki Lee, Nakul Gopalan",
-      "releaseDate": "2026-05-01",
-      "url": "https://arxiv.org/abs/2505.06363",
-      "summary": "Framework that learns kinematic constraints and manipulation sequences of multi-DoF objects from human demonstrations."
-    },
-    {
-      "name": "Composing Diffusion Policies for Few-shot Learning of Motions",
-      "publisher": "Compositional Learning Workshop @ NeurIPS 2024 | Omkar Patil, Anant Sah, Nakul Gopalan",
-      "releaseDate": "2024-10-31",
-      "website": "https://sites.google.com/asu.edu/comp-fsl/",
-      "url": "https://arxiv.org/abs/2410.17479",
-      "summary": "Compositional approach that enables few-shot learning for novel skills by utilizing a combination of base policy priors is presented."
-    },
-    {
-      "name": "Hardware-Software Co-Design for Path Planning by Drones",
-      "publisher": "IROS 2024 | Ayushi Dube*, Omkar Patil*, Gian Singh, Nakul Gopalan, and Sarma Vrudhula",
-      "releaseDate": "2024-10-20",
-      "url": "https://ieeexplore.ieee.org/document/10802753",
-      "summary": "This work consists of designing a hardware-software co-design, MT+, for adapting the Mikami-Tabuchi (MT) algorithm for on-board path planning by drones in a 3D environment."
-    },
-    {
-      "name": "Learning Temporally Composable Task Segmentations with Language",
-      "publisher": "IROS 2024 | Divyanshu Raj, Omkar Patil, Weiwei Gu, Chitta Baral and Nakul Gopalan",
-      "releaseDate": "2024-10-20",
-      "url": "https://ieeexplore.ieee.org/document/10802712/",
-      "summary": "We present an approach to identify sub-tasks within a demonstrated robot trajectory with the supervision provided by language instructions."
-    },
-    {
-      "name": "Understanding metrics for paraphrasing",
-      "publisher": "Arxiv | Omkar Patil, Rahul Singh, Tarun Joshi",
-      "releaseDate": "2022-05-26",
-      "website": "https://arxiv.org/abs/2205.13119",
-      "url": "https://arxiv.org/abs/2205.13119",
-      "summary": "We propose a novel metric ROUGE-P to measure the quality of paraphrases along the dimensions of adequacy, novelty and fluency."
-    },
-    {
-      "name": "Document automation architectures and technologies: A survey",
-      "publisher": "Arxiv | Mohammad Achachlouei*, Omkar Patil*, Tarun Joshi, Vijayan Nair",
-      "releaseDate": "2021-09-23",
-      "website": "https://arxiv.org/abs/2109.11603",
-      "url": "https://arxiv.org/abs/2109.11603",
-      "summary": "This paper surveys the current state of the art in document automation in light of recent advances in AI and deep neural networks."
-    }
-  ],
   "education": [
     {
       "institution": "Arizona State University",
       "area": "Computer Science (3.9/4.0)",
       "studyType": "Doctor of Philosophy",
       "startDate": "2023-08-31",
-      "endDate": "2028-05-31",
-      "gpa": "3.9",
-      "courses": [
-        "Planning and Learning Methods for AI",
-        "Knowledge Representation and Reasoning"
-      ]
+      "endDate": "2027-08-15",
+      "gpa": "3.9"
     },
     {
       "institution": "Indian Institute of Technology, Madras",
-      "area": "Robotics and AI (8.22/10)",
-      "studyType": "Master of Technology",
-      "startDate": "2018-07-31",
-      "endDate": "2020-05-31",
+      "studyType": "Bachelor's in Mechanical Engineering and Master's in Robotics and AI",
+      "startDate": "2015-08-15",
+      "endDate": "2020-05-15",
       "gpa": "8.22",
-      "courses": [
-        "Deep Learning",
-        "Reinforcement Learning"
-      ]
+      "score": "8.22/10"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Self-Supervised Keyframe Discovery for Horizon-Invariant Behavior Cloning",
+      "publisher": "NeurIPS 2026 | Prabin Kumar Rath, Omkar Patil, Nakul Gopalan",
+      "releaseDate": "2026-12-15",
+      "url": "https://keyframe-mnemonics.github.io/",
+      "website": "https://keyframe-mnemonics.github.io/",
+      "summary": "Self-supervised method that discovers information-critical observations (mnemonics) as keyframes, conditioning behavior cloning policies on them to retain context over long horizons, without annotations."
     },
     {
-      "institution": "Indian Institute of Technology, Madras",
-      "area": "Mechanical Engineering (8.22/10)",
-      "studyType": "Bachelor of Technology",
-      "startDate": "2015-12-31",
-      "endDate": "2019-12-31",
-      "gpa": "8.22",
-      "courses": [
-        "Computational Heat & Fluid Flow",
-        "Design of Machine Elements"
-      ]
+      "name": "You've Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector",
+      "publisher": "arXiv | Omkar Patil, Ondrej Biza, Thomas Weng, Karl Schmeckpeper, Wil Thomason, Xiaohan Zhang, Kausik Sivakumar, Robin Walters, Nakul Gopalan, Sebastian Castro, Stephen Hart, Eric Rosen",
+      "releaseDate": "2026-03-15",
+      "url": "https://arxiv.org/abs/2603.15757",
+      "website": "https://lottery-tickets.rai-inst.com/",
+      "summary": "Search method to find a single constant noise vector (golden ticket) that improves pretrained diffusion/flow matching robot policies including VLAs (GR00T N1.5, π0, SmolVLA) without any retraining."
+    },
+    {
+      "name": "StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models",
+      "publisher": "IROS 2026 | Kartikay Pangaonkar*, Prabin Rath*, Omkar Patil*, Nakul Gopalan",
+      "releaseDate": "2026-10-15",
+      "url": "https://arxiv.org/abs/2603.20659",
+      "website": "https://stagecraft-decorator.github.io/stagecraft/",
+      "summary": "Training-free VLM-based scene staging for VLAs (π0.5, SmolVLA); +40% absolute success on real robots."
+    },
+    {
+      "name": "Factorizing Diffusion Policies for Observation Modality Prioritization",
+      "publisher": "ICRA 2026 | Omkar Patil, Prabin Rath, Kartikay Pangaonkar, Eric Rosen, Nakul Gopalan",
+      "releaseDate": "2026-05-15",
+      "url": "https://arxiv.org/abs/2509.16830",
+      "website": "https://fdp-policy.github.io/fdp-policy/",
+      "summary": "Method to prioritize observational modalities, such as vision over tactile, for learning diffusion policies."
     }
   ],
   "work": [
     {
-      "company": "Robotics and AI Institute (Formerly BDAI)",
-      "name": "Robotics and AI Institute (Formerly BDAI)",
-      "position": "Graduate Intern",
-      "startDate": "2025-09-08",
+      "company": "RAI Institute",
+      "name": "RAI Institute",
+      "position": "Research Intern",
+      "startDate": "2025-07-15",
       "endDate": "2026-01-11",
       "highlights": [
-        "Research at the intersection of performance improvement and steering for robot policies.",
-        "Methodologies used include generative modeling (diffusion/flow) and reinforcement learning."
+        "Developed a latent-steering-based approach that improved generative policies on 46 of 51 tasks without retraining, resulting in the filing of a patent and a publication: https://lottery-tickets.rai-inst.com/",
+        "Showed that derivative-free episodic policy improvement can be competitive with policy-gradient and actor-critic methods, especially for VLAs, potentially with a 15× reduction in wall-clock time."
       ],
-      "summary": "Fall intern in the Compose research group, focusing on robot learning.",
+      "summary": "Post-training of VLAs and generative robot policies on downstream reward functions.",
       "location": "Cambridge, MA",
       "website": "https://rai-inst.com/"
     },
     {
-      "company": "Arizona State University",
-      "name": "Arizona State University",
+      "company": "Logos Robotics Lab, Arizona State University",
+      "name": "Logos Robotics Lab, Arizona State University",
       "position": "Graduate Research Assistant",
-      "startDate": "2023-08-01",
+      "startDate": "2023-08-15",
       "endDate": "",
       "highlights": [
-        "Developing robot learning algorithms that leverage compositionality for sample-efficient generalization.",
-        "Developed a ROS2-based multi-drone formation and behavior control system in AirSim."
+        "Built ROS 2 teleoperation pipelines (leader arm, VR headset) for a Franka Research 3 arm and a ROBOTIS AI Worker semi-humanoid; collected 500+ demonstrations across 10 tasks.",
+        "Built data-collection and real-time inference pipelines to deploy trained policies, including Diffusion Policy, ACT, and VLAs (π0.5, SmolVLA), on real robots.",
+        "Fine-tuned policies with behavior cloning and on-robot policy improvement, and deployed simulation-trained policies on hardware (sim-to-real)."
       ],
-      "summary": "Research assistant in Dr. Nakul Gopalan's lab at Arizona State University.",
+      "summary": "PhD research on robot learning for real-world manipulation with Dr. Nakul Gopalan.",
       "location": "Tempe, Arizona",
       "website": "https://logos-robotics-lab.github.io/"
     },
     {
       "company": "Wells Fargo",
       "name": "Wells Fargo",
-      "position": "Senior NLP Quant",
-      "startDate": "2022-10-31",
-      "endDate": "2023-07-31",
-      "summary": "Member of the Artificial Intelligence and Automation within Corporate Model Risk.",
-      "highlights": [
-        "Researched and implemented prompt-tuning on language models for generating different kinds of paraphrases for downstream applications such as robustness testing.",
-        "Collaborated with other researchers within the team to develop methodologies for evaluating model weaknesses with a special focus on text classification models."
-      ],
-      "location": "Bengaluru, India"
-    },
-    {
-      "company": "Wells Fargo",
-      "name": "Wells Fargo",
-      "position": "NLP Quant",
+      "position": "Senior NLP Quantitative Researcher",
       "startDate": "2020-08-31",
-      "endDate": "2022-10-31",
-      "summary": "Member of the Artificial Intelligence and Automation within Corporate Model Risk.",
+      "endDate": "2023-07-31",
       "highlights": [
-        "Explored text generation for the task of paraphrasing and developed a new metric to evaluate the quality of paraphrases.",
-        "Surveyed various document automation frameworks present in literature.",
-        "Contributed significantly to the internal code library and made several presentations on research projects, across the group"
+        "Developed a novel metric to evaluate the quality of LLM-generated paraphrases ([arXiv](https://arxiv.org/abs/2205.13119), [patent](https://patents.google.com/patent/US12524612B1/en)).",
+        "Surveyed and built LLM-enabled document generation, speeding up internal documentation ([arXiv](https://arxiv.org/abs/2308.09341))."
       ],
       "location": "Bengaluru, India"
-    },
-    {
-      "name": "Institute WebOps and MobOps",
-      "company": "Institute WebOps and MobOps",
-      "url": "https://github.com/omkarpatil18/iitm_students_app",
-      "position": "Head",
-      "startDate": "2017-04-30",
-      "endDate": "2018-05-31",
-      "summary": "Lead of the official mobile development team of IIT Madras.",
-      "highlights": [
-        "Led a 9 member team for the development of the ‘Students App’, managing a budget of ~INR 3L.",
-        "Increased the number of active users by ~160%, to 6500+ students, with 12000+ downloads in total.",
-        "Developed a sophisticated Java front-end and PHP back-end to build a secure and useful application on Android."
-      ],
-      "location": "Chennai, India"
     }
   ],
   "volunteer": [
@@ -213,8 +129,8 @@
       "organization": "Madhuvan Foundation",
       "position": "Intern",
       "website": "https://www.madhuvanfoundation.org/",
-      "startDate": "2019-11-01",
-      "endDate": "2019-12-01",
+      "startDate": "2019-11-15",
+      "endDate": "2019-12-15",
       "summary": "Non-governmental organization for the welfare of underprivileged children.",
       "highlights": [
         "Quickly ramped up with the current operations of reselling scrap newspaper and facilitating education for the needy with the obtained proceeds",
@@ -225,36 +141,44 @@
     {
       "organization": "Conferences",
       "position": "Reviewer",
-      "startDate": "2023-01-01",
-      "summary": "Reviewer for IROS 2024, ICRA 2025, CORL 2025, ICRA 2026"
+      "startDate": "2025-01-15",
+      "summary": "CoRL 2025, 2026; ICRA 2025, 2026; IROS 2025, 2026",
+      "service": true
+    },
+    {
+      "organization": "Compositional and Modular Learning in the Era of Scaling in Robotics (IROS 2026)",
+      "position": "Organizer",
+      "website": "https://compositional-robotics.github.io/",
+      "startDate": "2026-10-15",
+      "summary": "Workshop on compositional and modular robot learning at IROS 2026.",
+      "service": true
     }
   ],
   "skills": [
     {
-      "name": "Robotics",
-      "level": "",
-      "keywords": [
-        "Motion Planning (IK, Trajectory Optimization)",
-        "Perception (Vision, Point Clouds), Control (Position, Operational Space)",
-        "Robotics Stack (ROS2, MuJoCo, Isaac Sim, Gazebo)"
-      ]
-    },
-    {
       "name": "Robot Learning",
       "level": "",
       "keywords": [
-        "ML Tooling (PyTorch, JAX, W&B), Systems (Python, Linux, Docker, Git)",
-        "Generative Modeling (Diffusion, Flows)",
-        "Reinforcement Learning (Offline RL, SAC, PPO)"
+        "Imitation Learning",
+        "Behavior Cloning",
+        "VLA Post-training (Latent Steering, Policy Improvement)",
+        "Generative Policies (Diffusion, Flow Matching, ACT)",
+        "Reinforcement Learning (PPO, SAC, Offline RL, On-robot RL, Sim-to-Real)"
       ]
     },
     {
-      "name": "Natural Language Processing",
+      "name": "Robotics",
       "level": "",
       "keywords": [
-        "NLP Tooling (HuggingFace, NLTK, SpaCy)",
-        "Human-robot Interaction",
-        "Robustness, Intepretability, Explainability"
+        "Motion Planning (IK, Trajectory Optimization), Perception (Vision, Point Clouds), Control",
+        "Hardware (Franka FR3, ROBOTIS AI Worker), Teleoperation (Leader Arm, VR), ROS 2, MuJoCo, Isaac Sim"
+      ]
+    },
+    {
+      "name": "Tooling",
+      "level": "",
+      "keywords": [
+        "VLAs (π0.5, SmolVLA, GR00T N1.5), LeRobot, PyTorch, JAX, Hugging Face, W&B, Docker, Git"
       ]
     }
   ],

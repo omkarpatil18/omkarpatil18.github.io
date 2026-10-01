@@ -880,9 +880,31 @@ footer.sticky-bottom {
       border-radius: 8px;
       background-color: var(--global-publication-bg-color);
 
-      // Vertically centre the text against the fixed-height preview.
+      // Vertically centre the text against the preview column.
       > .row {
         align-items: center;
+      }
+
+      .links.links-media {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem;
+        margin-top: 0.6rem;
+
+        a.btn,
+        a.award.btn {
+          display: inline-flex;
+          align-items: center;
+          height: 1.4rem;
+          margin: 0;
+          padding: 0 0.6rem;
+          font-size: 0.7rem;
+          line-height: 1;
+        }
+
+        a.award.btn {
+          color: #fff !important;
+        }
       }
 
       // Fixed box for every preview, whatever its aspect ratio. `contain` keeps
@@ -893,22 +915,74 @@ footer.sticky-bottom {
         object-fit: contain;
         background-color: #fff;
         padding: 0.35rem;
+
+        @media (max-width: 575.98px) {
+          height: auto;
+          margin-bottom: 0.75rem;
+        }
       }
 
       .topic {
-        margin-bottom: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem;
+        margin-bottom: 0.35rem;
       }
 
-      .topic-badge {
-        display: inline-block;
-        padding: 0.15rem 0.5rem;
+      .tldr {
+        margin: 0 0 0.75rem;
+        padding: 0.4rem 0.6rem;
+        border-left: 3px solid var(--global-theme-color);
+        border-radius: 0 4px 4px 0;
+        background-color: var(--global-code-bg-color);
+        color: var(--global-text-color);
+        font-size: 0.88rem;
+        font-style: italic;
+        line-height: 1.45;
+
+        strong {
+          margin-right: 0.25rem;
+          color: var(--global-theme-color);
+          font-style: normal;
+          font-size: 0.75rem;
+          letter-spacing: 0.04em;
+        }
+      }
+
+      .periodical {
+        margin-top: 0.15rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--global-text-color-light);
+
+        em {
+          color: inherit;
+        }
+      }
+
+      .topic-badge,
+      .venue-chip {
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+        height: 1.4rem;
+        padding: 0 0.55rem;
         border-radius: 4px;
         background-color: var(--global-theme-color);
         color: #fff;
         font-size: 0.7rem;
         font-weight: 600;
+        line-height: 1;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .venue-chip {
+        background-color: var(--global-text-color);
+        color: var(--global-bg-color);
+        font-weight: 700;
       }
 
       .abbr {
@@ -939,10 +1013,16 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: bolder;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.35;
+        margin-bottom: 0.4rem;
       }
 
       .author {
+        font-size: 0.9rem;
+        margin-bottom: 0.1rem;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 

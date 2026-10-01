@@ -10,9 +10,13 @@ compositional-learning:
   color: "#1f6feb"
 
 policy-improvement:
-  name: Policy Improvement
+  name: Policy Adaptation
   color: "#8250df"
 
 robotics-systems:
   name: Robotics Systems
   color: "#a4243b"
+
+imitation-learning:
+  name: Imitation Learning
+  color: "#1a7f37"

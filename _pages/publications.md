@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: I am primarily interested in compositional robot learning. I believe composing modalities will play an important role in developing generalist robots as paired scaling of all sensory data is difficult, and we will need efficient ways to compose information obtained through different modalities. Also related is policy improvement, where I try to develop methods that improve the performance of a pre-trained policy using new sources of information. Prior to joining the PhD program at Arizona State, I worked on NLP research at Wells Fargo.
+description: I am primarily interested in policy adaptation using compositional or modular appraches. I believe composing modalities will play an important role in developing generalist robots as paired scaling of all sensory data is difficult, and we will need efficient ways to compose information obtained through different modalities. Prior to joining the PhD program at Arizona State, I worked on NLP research at Wells Fargo.
 nav: true
 nav_order: 2
 ---
@@ -50,8 +50,7 @@ nav_order: 2
         const topics = row ? row.dataset.topics.split(/\s+/).filter(Boolean) : [];
         const visible = selected.size === 0 || topics.some((t) => selected.has(t));
         entry.style.display = visible ? "" : "none";
-      });
-      clear.style.display = selected.size === 0 ? "none" : "";
+      });      clear.style.display = selected.size === 0 ? "none" : "";
     }
 
     toggles.forEach(function (button) {

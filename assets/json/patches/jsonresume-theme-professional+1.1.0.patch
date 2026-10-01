@@ -1,0 +1,360 @@
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Education.js b/node_modules/jsonresume-theme-professional/src/ui/Education.js
+index 3c06212..d13db20 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Education.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Education.js
+@@ -23,6 +23,7 @@ const Education = ({ education }) => {
+               startDate={e.startDate}
+               endDate={e.endDate}
+               highlights={e.courses}
++              columns={2}
+               key={key}
+             />
+           );
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Experience.js b/node_modules/jsonresume-theme-professional/src/ui/Experience.js
+index 56853cc..526c50f 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Experience.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Experience.js
+@@ -22,7 +22,7 @@ const SubTitle = styled.div`
+ `;
+ 
+ const Container = styled.div`
+-  margin-bottom: 10px;
++  margin-bottom: 7px;
+ `;
+ 
+ const Summary = styled.p`
+@@ -37,12 +37,13 @@ const Experience = ({
+   subTitle,
+   summary,
+   highlights,
++  columns,
+ }) => {
+   return (
+     <Container>
+       <Meta>
+         <Title>{title}</Title>
+-        <div className="secondary">
++        <div className="secondary" style={{ whiteSpace: 'nowrap', flexShrink: 0, marginLeft: '12px' }}>
+           {date ? (
+             <Date date={date} />
+           ) : (
+@@ -53,7 +54,7 @@ const Experience = ({
+       {subTitle && <SubTitle>{subTitle}</SubTitle>}
+       <div className="secondary">
+         {summary && <Summary>{summary}</Summary>}
+-        <List items={highlights} />
++        <List items={highlights} columns={columns} />
+       </div>
+     </Container>
+   );
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Hero.js b/node_modules/jsonresume-theme-professional/src/ui/Hero.js
+index 58c268d..83c733c 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Hero.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Hero.js
+@@ -7,6 +7,7 @@ import {
+   FaPhoneAlt,
+   FaLink,
+   FaLinkedin,
++  FaGraduationCap,
+ } from 'react-icons/fa';
+ import Section from './Section';
+ 
+@@ -14,7 +15,7 @@ const Title = styled.div`
+   font-size: 3rem;
+   text-align: center;
+   margin-top: 20px;
+-  margin-bottom: 20px;
++  margin-bottom: 14px;
+ `;
+ 
+ const BasicInfo = styled.div`
+@@ -49,6 +50,7 @@ const HeroComponent = ({ basics }) => {
+   const linkedin = profiles.find(({ network }) => network === 'linkedin');
+   const github = profiles.find(({ network }) => network === 'github');
+   const twitter = profiles.find(({ network }) => network === 'twitter');
++  const scholar = profiles.find(({ network }) => network === 'google scholar');
+ 
+   return (
+     <Section>
+@@ -58,7 +60,7 @@ const HeroComponent = ({ basics }) => {
+           {location && (
+             <Info>
+               <FaMapPin />
+-              {location.city}, {location.countryCode}
++              {location.city}, {location.region || location.countryCode}
+             </Info>
+           )}
+           {email && (
+@@ -76,17 +78,23 @@ const HeroComponent = ({ basics }) => {
+           {url && (
+             <Info>
+               <FaLink />
+-              <a href="{url}">{url}</a>
++              <a href={url}>{url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>
+             </Info>
+           )}
+           {linkedin && (
+             <Info>
+               <FaLinkedin />
+-              <a href={`https://linkedin.com/${linkedin.username}`}>
+-                {linkedin.username}
++              <a href={linkedin.url || `https://linkedin.com/in/${linkedin.username}`}>
++                LinkedIn
+               </a>
+             </Info>
+           )}
++          {scholar && (
++            <Info>
++              <FaGraduationCap />
++              <a href={scholar.url}>{scholar.username}</a>
++            </Info>
++          )}
+           {github && (
+             <Info>
+               <FaGithub />
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/List.js b/node_modules/jsonresume-theme-professional/src/ui/List.js
+index fd71869..9deef22 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/List.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/List.js
+@@ -1,8 +1,13 @@
+ import styled from 'styled-components';
++import { FaExternalLinkAlt } from 'react-icons/fa';
+ 
+ const ListContainer = styled.ul`
+   padding-left: 20px;
+   line-height: 16px;
++  ${({ columns }) =>
++    columns
++      ? `display: grid; grid-template-columns: repeat(${columns}, 1fr); column-gap: 20px;`
++      : ''}
+   li::before {
+     content: '•';
+     display: inline-block;
+@@ -12,15 +17,28 @@ const ListContainer = styled.ul`
+   }
+ `;
+ 
+-const List = ({ items }) => {
++// Render markdown-style [label](url) links as short clickable labels.
++const renderItem = (item) =>
++  item.split(/(\[[^\]]+\]\([^)]+\))/).map((part, i) => {
++    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
++    if (!m) return part;
++    return (
++      <a key={i} href={m[2]} style={{ color: 'inherit', textDecoration: 'none' }}>
++        {m[1]}
++        <FaExternalLinkAlt style={{ color: '#1f5fbf', width: '7px', height: '7px', marginLeft: '3px' }} />
++      </a>
++    );
++  });
++
++const List = ({ items, columns }) => {
+   if (!items) {
+     return null;
+   }
+ 
+   return (
+-    <ListContainer>
++    <ListContainer columns={columns}>
+       {items.map((item) => (
+-        <li key={item}>{item}</li>
++        <li key={item}>{renderItem(item)}</li>
+       ))}
+     </ListContainer>
+   );
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js b/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js
+index 9c05172..0b571a5 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js
+@@ -1,28 +1,15 @@
+ import styled from 'styled-components';
+ 
+-const Name = styled.div`
+-  font-weight: 600;
+-  font-size: 1.4rem;
+-`;
+-
+-const List = styled.div`
+-  font-size: 1.4rem;
+-  margin-left: 5px;
+-`;
+-
+ const Container = styled.div`
+-  margin-bottom: 5px;
+-  display: flex;
+-  align-items: baseline;
++  margin-bottom: 3px;
++  font-size: 1.4rem;
++  line-height: 1.22;
+ `;
+ 
+ const OneLineList = ({ name, items }) => {
+   return (
+     <Container>
+-      <Name>{name}:</Name>
+-      <List>
+-        <div class="secondary">{items.join(', ')}</div>
+-      </List>
++      <strong>{name}:</strong> <span className="secondary">{items.join(', ')}</span>
+     </Container>
+   );
+ };
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Publications.js b/node_modules/jsonresume-theme-professional/src/ui/Publications.js
+index de00d3e..8c4899c 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Publications.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Publications.js
+@@ -1,5 +1,6 @@
+ import Section from './Section';
+ import Experience from './Experience';
++import { FaExternalLinkAlt } from 'react-icons/fa';
+ 
+ const Publications = ({ publications }) => {
+   if (!publications) {
+@@ -10,10 +11,24 @@ const Publications = ({ publications }) => {
+     <div>
+       <Section title="Publications">
+         {publications.map((p, key) => {
++          const link = p.website || p.url;
++          const title = link ? (
++            <a href={link} style={{ color: 'inherit', textDecoration: 'none' }}>
++              {p.name}
++              <FaExternalLinkAlt style={{ color: '#1f5fbf', width: '8px', height: '8px', marginLeft: '5px', verticalAlign: 'baseline' }} />
++            </a>
++          ) : (
++            p.name
++          );
+           return (
+             <Experience
+-              title={p.name}
+-              subTitle={p.publisher}
++              title={title}
++              subTitle={
++                p.publisher &&
++                p.publisher.split(/(Omkar Patil\*?)/).map((part, i) =>
++                  /^Omkar Patil/.test(part) ? <strong key={i}>{part}</strong> : part
++                )
++              }
+               date={p.releaseDate}
+               summary={p.summary}
+               key={key}
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Resume.js b/node_modules/jsonresume-theme-professional/src/ui/Resume.js
+index 0d582b9..faf7020 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Resume.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Resume.js
+@@ -11,26 +11,27 @@ import Skills from './Skills';
+ import Interests from './Interests';
+ import Languages from './Languages';
+ import References from './References';
++import Service from './Service';
+ 
+ const Layout = styled.div`
+-  max-width: 660px;
++  max-width: 760px;
+   margin: 0 auto;
+   line-height: calc(1ex / 0.32);
+-  margin-bottom: 40px;
++  margin-bottom: 0;
+ `;
+ 
+ const Resume = ({ resume }) => {
+   return (
+     <Layout>
+       <Hero basics={resume.basics} />
+-      <Summary basics={resume.basics} />
+       <Education education={resume.education} />
++      <Publications publications={resume.publications} />
+       <Work work={resume.work} />
+       <Projects projects={resume.projects} />
+       <Certificates certificates={resume.certificates} />
+-      <Publications publications={resume.publications} />
+       <Awards awards={resume.awards} />
+       <Languages languages={resume.languages} />
++      <Service volunteer={resume.volunteer} />
+       <Skills skills={resume.skills} />
+       <Interests interests={resume.interests} />
+       <References references={resume.references} />
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Section.js b/node_modules/jsonresume-theme-professional/src/ui/Section.js
+index 52981db..213877b 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Section.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Section.js
+@@ -2,7 +2,7 @@ import styled from 'styled-components';
+ 
+ const Section = styled.div`
+   max-width: 700px;
+-  margin: 0 auto 18px;
++  margin: 0 auto 12px;
+ 
+   h2 {
+     margin: 0;
+@@ -14,7 +14,7 @@ const Section = styled.div`
+   hr {
+     margin: 0;
+     padding: 0;
+-    margin-top: 7px;
++    margin-top: 4px;
+     margin-bottom: 3px;
+   }
+ `;
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Service.js b/node_modules/jsonresume-theme-professional/src/ui/Service.js
+new file mode 100644
+index 0000000..c931547
+--- /dev/null
++++ b/node_modules/jsonresume-theme-professional/src/ui/Service.js
+@@ -0,0 +1,38 @@
++import styled from 'styled-components';
++import Section from './Section';
++import { FaExternalLinkAlt } from 'react-icons/fa';
++
++const Item = styled.li`
++  margin-bottom: 3px;
++`;
++
++const Service = ({ volunteer }) => {
++  const items = (volunteer || []).filter((v) => v.service);
++  if (items.length === 0) {
++    return null;
++  }
++
++  return (
++    <div>
++      <Section title="Service">
++        <ul style={{ paddingLeft: 0, listStyle: 'none' }}>
++          {items.map((v, key) => (
++            <Item key={key}>
++              <strong>{v.position}:</strong>{' '}
++              {v.website ? (
++                <a href={v.website} style={{ color: 'inherit', textDecoration: 'none' }}>
++                  {v.organization}
++                  <FaExternalLinkAlt style={{ color: '#1f5fbf', width: '8px', height: '8px', marginLeft: '5px' }} />
++                </a>
++              ) : (
++                v.summary
++              )}
++            </Item>
++          ))}
++        </ul>
++      </Section>
++    </div>
++  );
++};
++
++export default Service;
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/Work.js b/node_modules/jsonresume-theme-professional/src/ui/Work.js
+index 1c2659e..230317f 100644
+--- a/node_modules/jsonresume-theme-professional/src/ui/Work.js
++++ b/node_modules/jsonresume-theme-professional/src/ui/Work.js
+@@ -12,8 +12,12 @@ const Work = ({ work }) => {
+         {work.map((w, key) => {
+           return (
+             <Experience
+-              title={w.position}
+-              subTitle={w.name}
++              title={
++                <>
++                  {w.position}
++                  <span style={{ fontWeight: 400, fontStyle: 'italic' }}>, {w.name}</span>
++                </>
++              }
+               startDate={w.startDate}
+               endDate={w.endDate}
+               summary={w.summary}
