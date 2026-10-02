@@ -83,33 +83,33 @@
   ],
   "work": [
     {
-      "company": "RAI Institute",
-      "name": "RAI Institute",
-      "position": "Research Intern",
-      "startDate": "2025-07-15",
-      "endDate": "2026-01-11",
-      "highlights": [
-        "Developed a latent-steering-based approach that improved generative policies on 46 of 51 tasks without retraining, resulting in the filing of a patent and a publication: https://lottery-tickets.rai-inst.com/",
-        "Showed that derivative-free episodic policy improvement can be competitive with policy-gradient and actor-critic methods, especially for VLAs, potentially with a 15× reduction in wall-clock time."
-      ],
-      "summary": "Post-training of VLAs and generative robot policies on downstream reward functions.",
-      "location": "Cambridge, MA",
-      "website": "https://rai-inst.com/"
-    },
-    {
       "company": "Logos Robotics Lab, Arizona State University",
       "name": "Logos Robotics Lab, Arizona State University",
       "position": "Graduate Research Assistant",
       "startDate": "2023-08-15",
       "endDate": "",
       "highlights": [
-        "Built ROS 2 teleoperation pipelines (leader arm, VR headset) for a Franka Research 3 arm and a ROBOTIS AI Worker semi-humanoid; collected 500+ demonstrations across 10 tasks.",
-        "Built data-collection and real-time inference pipelines to deploy trained policies, including Diffusion Policy, ACT, and VLAs (π0.5, SmolVLA), on real robots.",
-        "Fine-tuned policies with behavior cloning and on-robot policy improvement, and deployed simulation-trained policies on hardware (sim-to-real)."
+        "Build ROS 2 teleoperation pipelines (leader arm, VR headset) for a Franka Research 3 arm and a ROBOTIS AI Worker semi-humanoid, used to collect 500+ demonstrations across 10 tasks.",
+        "Build data-collection and real-time inference pipelines to deploy trained policies, including Diffusion Policy, ACT, and VLAs (π0.5, SmolVLA), on real robots.",
+        "Fine-tune policies with behavior cloning and on-robot policy improvement, and deploy simulation-trained policies on hardware (sim-to-real) for research experiments and demonstrations."
       ],
       "summary": "PhD research on robot learning for real-world manipulation with Dr. Nakul Gopalan.",
       "location": "Tempe, Arizona",
       "website": "https://logos-robotics-lab.github.io/"
+    },
+    {
+      "company": "RAI Institute",
+      "name": "RAI Institute",
+      "position": "Research Intern",
+      "startDate": "2025-07-15",
+      "endDate": "2026-01-11",
+      "highlights": [
+        "Developed a latent-steering-based approach that improved generative policies on 46 of 51 tasks without retraining, resulting in the filing of a patent and a publication: https://lottery-tickets.rai-inst.com/.",
+        "Demonstrated that derivative-free episodic policy improvement can be competitive with policy-gradient and actor-critic methods, especially for VLAs, potentially with a 15× reduction in wall-clock time."
+      ],
+      "summary": "Post-training of VLAs and generative robot policies on downstream reward functions.",
+      "location": "Cambridge, MA",
+      "website": "https://rai-inst.com/"
     },
     {
       "company": "Wells Fargo",

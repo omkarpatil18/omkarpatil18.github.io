@@ -11,10 +11,18 @@ index 3c06212..d13db20 100644
              />
            );
 diff --git a/node_modules/jsonresume-theme-professional/src/ui/Experience.js b/node_modules/jsonresume-theme-professional/src/ui/Experience.js
-index 56853cc..526c50f 100644
+index 56853cc..e923319 100644
 --- a/node_modules/jsonresume-theme-professional/src/ui/Experience.js
 +++ b/node_modules/jsonresume-theme-professional/src/ui/Experience.js
-@@ -22,7 +22,7 @@ const SubTitle = styled.div`
+@@ -2,6 +2,7 @@ import styled from 'styled-components';
+ import List from './List';
+ import DateRange from './DateRange';
+ import Date from './Date';
++import { noBreakHyphens } from './noBreak';
+ 
+ const Meta = styled.div`
+   display: flex;
+@@ -22,7 +23,7 @@ const SubTitle = styled.div`
  `;
  
  const Container = styled.div`
@@ -23,7 +31,7 @@ index 56853cc..526c50f 100644
  `;
  
  const Summary = styled.p`
-@@ -37,12 +37,13 @@ const Experience = ({
+@@ -37,12 +38,13 @@ const Experience = ({
    subTitle,
    summary,
    highlights,
@@ -38,11 +46,13 @@ index 56853cc..526c50f 100644
            {date ? (
              <Date date={date} />
            ) : (
-@@ -53,7 +54,7 @@ const Experience = ({
+@@ -52,8 +54,8 @@ const Experience = ({
+       </Meta>
        {subTitle && <SubTitle>{subTitle}</SubTitle>}
        <div className="secondary">
-         {summary && <Summary>{summary}</Summary>}
+-        {summary && <Summary>{summary}</Summary>}
 -        <List items={highlights} />
++        {summary && <Summary>{noBreakHyphens(summary)}</Summary>}
 +        <List items={highlights} columns={columns} />
        </div>
      </Container>
@@ -113,12 +123,13 @@ index 58c268d..83c733c 100644
              <Info>
                <FaGithub />
 diff --git a/node_modules/jsonresume-theme-professional/src/ui/List.js b/node_modules/jsonresume-theme-professional/src/ui/List.js
-index fd71869..9deef22 100644
+index fd71869..a26e29a 100644
 --- a/node_modules/jsonresume-theme-professional/src/ui/List.js
 +++ b/node_modules/jsonresume-theme-professional/src/ui/List.js
-@@ -1,8 +1,13 @@
+@@ -1,8 +1,14 @@
  import styled from 'styled-components';
 +import { FaExternalLinkAlt } from 'react-icons/fa';
++import { noBreakHyphens } from './noBreak';
  
  const ListContainer = styled.ul`
    padding-left: 20px;
@@ -130,7 +141,7 @@ index fd71869..9deef22 100644
    li::before {
      content: '•';
      display: inline-block;
-@@ -12,15 +17,28 @@ const ListContainer = styled.ul`
+@@ -12,15 +18,28 @@ const ListContainer = styled.ul`
    }
  `;
  
@@ -139,7 +150,7 @@ index fd71869..9deef22 100644
 +const renderItem = (item) =>
 +  item.split(/(\[[^\]]+\]\([^)]+\))/).map((part, i) => {
 +    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-+    if (!m) return part;
++    if (!m) return <span key={i}>{noBreakHyphens(part)}</span>;
 +    return (
 +      <a key={i} href={m[2]} style={{ color: 'inherit', textDecoration: 'none' }}>
 +        {m[1]}
@@ -163,12 +174,12 @@ index fd71869..9deef22 100644
      </ListContainer>
    );
 diff --git a/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js b/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js
-index 9c05172..0b571a5 100644
+index 9c05172..96d5713 100644
 --- a/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js
 +++ b/node_modules/jsonresume-theme-professional/src/ui/OneLineList.js
-@@ -1,28 +1,15 @@
+@@ -1,28 +1,16 @@
  import styled from 'styled-components';
- 
+-
 -const Name = styled.div`
 -  font-weight: 600;
 -  font-size: 1.4rem;
@@ -178,7 +189,8 @@ index 9c05172..0b571a5 100644
 -  font-size: 1.4rem;
 -  margin-left: 5px;
 -`;
--
++import { noBreakHyphens } from './noBreak';
+ 
  const Container = styled.div`
 -  margin-bottom: 5px;
 -  display: flex;
@@ -195,7 +207,7 @@ index 9c05172..0b571a5 100644
 -      <List>
 -        <div class="secondary">{items.join(', ')}</div>
 -      </List>
-+      <strong>{name}:</strong> <span className="secondary">{items.join(', ')}</span>
++      <strong>{name}:</strong> <span className="secondary">{noBreakHyphens(items.join(', '))}</span>
      </Container>
    );
  };
@@ -297,13 +309,14 @@ index 52981db..213877b 100644
  `;
 diff --git a/node_modules/jsonresume-theme-professional/src/ui/Service.js b/node_modules/jsonresume-theme-professional/src/ui/Service.js
 new file mode 100644
-index 0000000..c931547
+index 0000000..b145fe9
 --- /dev/null
 +++ b/node_modules/jsonresume-theme-professional/src/ui/Service.js
-@@ -0,0 +1,38 @@
+@@ -0,0 +1,39 @@
 +import styled from 'styled-components';
 +import Section from './Section';
 +import { FaExternalLinkAlt } from 'react-icons/fa';
++import { noBreakHyphens } from './noBreak';
 +
 +const Item = styled.li`
 +  margin-bottom: 3px;
@@ -328,7 +341,7 @@ index 0000000..c931547
 +                  <FaExternalLinkAlt style={{ color: '#1f5fbf', width: '8px', height: '8px', marginLeft: '5px' }} />
 +                </a>
 +              ) : (
-+                v.summary
++                noBreakHyphens(v.summary)
 +              )}
 +            </Item>
 +          ))}
@@ -358,3 +371,22 @@ index 1c2659e..230317f 100644
                startDate={w.startDate}
                endDate={w.endDate}
                summary={w.summary}
+diff --git a/node_modules/jsonresume-theme-professional/src/ui/noBreak.js b/node_modules/jsonresume-theme-professional/src/ui/noBreak.js
+new file mode 100644
+index 0000000..a4e5426
+--- /dev/null
++++ b/node_modules/jsonresume-theme-professional/src/ui/noBreak.js
+@@ -0,0 +1,13 @@
++// Keep hyphenated words on one line: PDF text extraction joins words split at a hyphen.
++export const noBreakHyphens = (text) =>
++  typeof text !== 'string'
++    ? text
++    : text.split(/(\S*\w-\w\S*)/).map((part, i) =>
++        /\w-\w/.test(part) ? (
++          <span key={`h${i}`} style={{ whiteSpace: 'nowrap' }}>
++            {part}
++          </span>
++        ) : (
++          part
++        )
++      );
